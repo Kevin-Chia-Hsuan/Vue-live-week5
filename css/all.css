@@ -1,0 +1,72 @@
+.cross-lg,
+.cross-md {
+  border: solid 2px #535c68;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background-color: #95afc0;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.cross-lg:hover,
+.cross-md {
+  background-color: #d63031;
+}
+.cross-lg:hover .line1,
+.cross-lg:hover .line2 {
+  width: 20px;
+}
+.cross-lg:hover .line1 {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.cross-lg:hover .line2 {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.cross-lg .line1,
+.cross-lg .line2 {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition-duration: 0.5s;
+}
+.cross-md .line1,
+.cross-md .line2 {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.cross-md .line1 {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.cross-md .line2 {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.cross-lg .line1 {
+  transform: translateX(-50%) translateY(-200%);
+}
+.cross-lg .line2 {
+  transform: translateX(-50%) translateY(200%);
+}
+
+@media (max-width: 1024px) {
+  .cross-lg {
+    display: none;
+  }
+  .cross-md {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .cross-md {
+    display: none;
+  }
+  .cross-lg {
+    display: block;
+  }
+}
